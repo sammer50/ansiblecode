@@ -7,3 +7,17 @@
   - name: install cockpit pakage
     apt:
       name: cockpit
+      #
+# start and enable cockpit
+#
+
+- name: start cockpit
+  systemd:
+    name: cockpit
+    state: started
+
+- name: enable cockpit.socket
+  systemd:
+    name: cockpit.socket
+    enabled: yes
+
