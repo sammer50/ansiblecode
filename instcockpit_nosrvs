@@ -1,0 +1,9 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install cockpit pakage
+    apt:
+      name: cockpit
