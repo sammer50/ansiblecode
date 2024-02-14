@@ -12,8 +12,10 @@
 #
 
   - name: start cockpit
-     service: name=cockpit state=started
-
-  - name: enable cockpit.socket
-     service:  name=cockpit.socket enabled=yes
+    ansible.builtin.service:
+      name: cockpit
+      state: started
+ # - name: enable cockpit.socket
+  #  ansible.builtin.service:
+   #  service:  name=cockpit.socket enabled=yes
 
