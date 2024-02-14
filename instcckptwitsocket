@@ -1,0 +1,22 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install cockpit pakage
+    apt:
+      name: cockpit
+      #
+# start and enable cockpit
+#
+
+  - name: start cockpit
+    ansible.builtin.service:
+      name: cockpit
+      state: started
+  - name: enable cockpit.socket
+    ansible.builtin.service:
+    name=cockpit.socket 
+    enabled=yes
+
