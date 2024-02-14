@@ -11,9 +11,9 @@
 # start and enable cockpit
 #
 
-- name: start cockpit
-  service: name=cockpit state=started
+  - name: start cockpit
+     service: name=cockpit state=started
 
-- name: enable cockpit.socket
-  service:  name=cockpit.socket enabled=yes
+  - name: enable cockpit.socket
+     service:  name=cockpit.socket enabled=yes
 
