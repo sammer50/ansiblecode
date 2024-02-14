@@ -1,9 +1,9 @@
 ---
 - hosts: all
   tasks:
-    - name: stop nginx
+    - name: stop apache2
       service:
-          name: nginx
+          name: apache2
           state: stopped
     - name: ensure nginx is not installed
-      apt: name=nginx state=absent
+      apt: name=apache2 state=absent
