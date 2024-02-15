@@ -6,4 +6,4 @@
 
   - name: install appache pakage
     apt:
-      name: appache
+      name: apache2
