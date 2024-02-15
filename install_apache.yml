@@ -1,8 +1,13 @@
----
-
-- hosts: 192.168.0.164
-  become: true
-  task:
-  - name: install apache2
-    apt:
-      nane: apache2
+ ---
+ 
+ - hosts: all
+   become: true
+   tasks:
+ 
+   - name: update repository index
+     apt:
+       update_cache: yes
+ 
+   - name: install apache2 package
+     apt:
+       name: apache2
