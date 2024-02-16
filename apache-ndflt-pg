@@ -7,3 +7,11 @@
   - name: install appache pakage
     apt:
       name: apache
+
+ - name: copy html file for site
+     copy:
+       src: default_site.html
+       dest: /var/www/html/index.html
+       owner: root
+       group: root
+       mode: 0644
